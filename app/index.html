@@ -3,7 +3,7 @@
     <head>
         <title>Index</title>
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/app/styles/main.css">
     </head>
     <body ng-app="sampleApp">
         <div class="col-md-12">
@@ -14,7 +14,15 @@
                   <a href="#/login" class="btn btn-default">Log in</a>
                   <button type="button" class="btn btn-default">Just a button</button>
                 </div>
-                <ng-view></ng-view>
+                <div class="panel panel-default top-buffer">
+                    <div class="panel-body">
+                        <p>Press me to go to the GREETINGS page.</p>
+                        <a href="#/greetings" class="btn btn-info">Press me</a>
+                    </div>
+                    <div class="panel-footer">
+                        <ng-view></ng-view>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- bower:js -->
@@ -29,7 +37,8 @@
         <script src="/bower_components/angular-touch/angular-touch.js"></script>
         <script src="/bower_components/angular-route/angular-route.js"></script>
         <!-- endbower -->
-        <script src="/scripts/app.js"></script>
-        <script src="/scripts/controllers/authController.js"></script>
+        <script src="/app/scripts/app.js"></script>
+        <script src="/app/scripts/controllers/authController.js"></script>
+        <script src="/app/scripts/controllers/greetingsController.js"></script>
     </body>
 </html>

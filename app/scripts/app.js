@@ -12,8 +12,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/login', {
-        templateUrl: '/views/login.html',
+        templateUrl: '/app/views/login.html',
         controller: 'authController'
+      })
+      .when('/greetings', {
+        templateUrl: '/app/views/greetings.html',
+        controller: 'greetingsController'
       })
       .otherwise({
         redirectTo: '/'
